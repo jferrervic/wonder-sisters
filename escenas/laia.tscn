@@ -8,6 +8,8 @@ size = Vector2(22, 40)
 
 [node name="laia" type="CharacterBody2D" unique_id=1882728851]
 script = ExtResource("1_yddr7")
+velocidad = 140.0
+salto = -330.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=552429618]
 texture = ExtResource("1_sx140")

@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://cxtbw6lkt258e"]
 
 [ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="1_d7u15"]
+[ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_jumxm"]
+[ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="2_0kxa1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(640, 20)
 
 [node name="Node2D" type="Node2D" unique_id=886577951]
+script = ExtResource("1_jumxm")
 
 [node name="laia" parent="." unique_id=1882728851 instance=ExtResource("1_d7u15")]
 position = Vector2(100, 280)
@@ -21,3 +24,6 @@ offset_left = -320.0
 offset_top = -10.0
 offset_right = 320.0
 offset_bottom = 10.0
+
+[node name="enara" parent="." unique_id=1322479456 instance=ExtResource("2_0kxa1")]
+position = Vector2(160, 280)

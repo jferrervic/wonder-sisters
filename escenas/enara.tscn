@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://de1fnqgpo8ygy"]
+
+[ext_resource type="Script" uid="uid://bawe5vpyd7n2t" path="res://escenas/hermana.gd" id="1_daj2g"]
+[ext_resource type="Texture2D" uid="uid://b4abuk6fmm44" path="res://assets/enara.png" id="2_daj2g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
+size = Vector2(22, 36)
+
+[node name="enara" type="CharacterBody2D" unique_id=1882728851]
+script = ExtResource("1_daj2g")
+velocidad = 165.0
+salto = -240.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=552429618]
+texture = ExtResource("2_daj2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1933617674]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_1d5kb")
