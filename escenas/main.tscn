@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cxtbw6lkt258e"]
+
+[ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="1_d7u15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
+size = Vector2(640, 20)
+
+[node name="Node2D" type="Node2D" unique_id=886577951]
+
+[node name="laia" parent="." unique_id=1882728851 instance=ExtResource("1_d7u15")]
+position = Vector2(100, 280)
+
+[node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
+position = Vector2(320, 340)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo" unique_id=1336915179]
+shape = SubResource("RectangleShape2D_1d5kb")
+
+[node name="ColorRect" type="ColorRect" parent="suelo" unique_id=1644653441]
+offset_left = -320.0
+offset_top = -10.0
+offset_right = 320.0
+offset_bottom = 10.0

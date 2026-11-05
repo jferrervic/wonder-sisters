@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dlm4wrtii4xe1"]
+
+[ext_resource type="Texture2D" uid="uid://btc4vxsy7kk51" path="res://assets/laia.png" id="1_sx140"]
+[ext_resource type="Script" uid="uid://bawe5vpyd7n2t" path="res://escenas/hermana.gd" id="1_yddr7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
+size = Vector2(22, 40)
+
+[node name="laia" type="CharacterBody2D" unique_id=1882728851]
+script = ExtResource("1_yddr7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=552429618]
+texture = ExtResource("1_sx140")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1933617674]
+position = Vector2(1, 3)
+shape = SubResource("RectangleShape2D_1d5kb")
