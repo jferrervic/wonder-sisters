@@ -3,15 +3,30 @@
 [ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="1_d7u15"]
 [ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_jumxm"]
 [ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="2_0kxa1"]
+[ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="4_26pgj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(640, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_em7hv"]
+size = Vector2(160, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0e6o"]
+size = Vector2(10, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jon8"]
+size = Vector2(40, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqn35"]
+size = Vector2(24, 28)
 
 [node name="Node2D" type="Node2D" unique_id=886577951]
 script = ExtResource("1_jumxm")
 
 [node name="laia" parent="." unique_id=1882728851 instance=ExtResource("1_d7u15")]
 position = Vector2(100, 280)
+velocidad = 150.0
+salto = -320.0
 
 [node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
 position = Vector2(320, 340)
@@ -27,3 +42,57 @@ offset_bottom = 10.0
 
 [node name="enara" parent="." unique_id=1322479456 instance=ExtResource("2_0kxa1")]
 position = Vector2(160, 280)
+salto = -260.0
+
+[node name="Pausa" parent="." unique_id=23788049 instance=ExtResource("4_26pgj")]
+
+[node name="Cama" type="StaticBody2D" parent="." unique_id=866178476]
+position = Vector2(380, 308)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cama" unique_id=913240457]
+shape = SubResource("RectangleShape2D_em7hv")
+
+[node name="ColorRect" type="ColorRect" parent="Cama" unique_id=1191096299]
+offset_left = -80.0
+offset_top = -22.0
+offset_right = 80.0
+offset_bottom = 22.0
+
+[node name="Cabecero" type="StaticBody2D" parent="." unique_id=900553140]
+position = Vector2(455, 276)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabecero" unique_id=391010298]
+shape = SubResource("RectangleShape2D_l0e6o")
+
+[node name="ColorRect" type="ColorRect" parent="Cabecero" unique_id=684060974]
+offset_left = -5.0
+offset_top = -10.0
+offset_right = 5.0
+offset_bottom = 10.0
+
+[node name="Peluche" type="StaticBody2D" parent="." unique_id=823254607]
+position = Vector2(480, 315)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peluche" unique_id=1560221715]
+shape = SubResource("RectangleShape2D_7jon8")
+
+[node name="ColorRect" type="ColorRect" parent="Peluche" unique_id=1387558241]
+offset_left = -20.0
+offset_top = -15.0
+offset_right = 20.0
+offset_bottom = 15.0
+color = Color(0.95686275, 0.6509804, 0.7529412, 1)
+
+[node name="Cojin" type="RigidBody2D" parent="." unique_id=1074555223]
+position = Vector2(380, 272)
+lock_rotation = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cojin" unique_id=1475813486]
+shape = SubResource("RectangleShape2D_dqn35")
+
+[node name="ColorRect" type="ColorRect" parent="Cojin" unique_id=2080022350]
+offset_left = -12.0
+offset_top = -14.0
+offset_right = 12.0
+offset_bottom = 14.0
+color = Color(0.6117647, 0.41960785, 0.23529412, 1)

@@ -8,8 +8,7 @@ size = Vector2(22, 36)
 
 [node name="enara" type="CharacterBody2D" unique_id=1882728851]
 script = ExtResource("1_daj2g")
-velocidad = 165.0
-salto = -240.0
+color_flecha = Color(0.98039216, 0.46666667, 0.4117647, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=552429618]
 texture = ExtResource("2_daj2g")
