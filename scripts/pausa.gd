@@ -4,6 +4,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = false
 	$VBoxContainer/BotonContinuar.pressed.connect(_on_continuar)
+	$VBoxContainer/BotonReiniciar.pressed.connect(_on_reiniciar)
 	$VBoxContainer/BotonSalir.pressed.connect(_on_salir)
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -21,6 +22,11 @@ func _pausar() -> void:
 func _on_continuar() -> void:
 	get_tree().paused = false
 	visible = false
+
+##LOGICA BOTON REINICIAR##
+func _on_reiniciar() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()
 
 func _on_salir() -> void:
 	get_tree().paused = false

@@ -70,7 +70,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_y3f0p")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ifyi")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8ifyi")
 theme_override_styles/focus = SubResource("StyleBoxFlat_8ifyi")
-text = "Jugar"
+text = "PLAY"
 
 [node name="BotonSalir" type="Button" parent="VBoxContainer" unique_id=179021127]
 layout_mode = 2
@@ -84,4 +84,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_y3f0p")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ifyi")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8ifyi")
 theme_override_styles/focus = SubResource("StyleBoxFlat_8ifyi")
-text = "Salir"
+text = "SALIR"

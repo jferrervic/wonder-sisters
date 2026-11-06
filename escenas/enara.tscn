@@ -2,15 +2,22 @@
 
 [ext_resource type="Script" uid="uid://bawe5vpyd7n2t" path="res://escenas/hermana.gd" id="1_daj2g"]
 [ext_resource type="Texture2D" uid="uid://b4abuk6fmm44" path="res://assets/enara.png" id="2_daj2g"]
+[ext_resource type="Texture2D" uid="uid://dt8lwspq2gcr6" path="res://assets/animaciones/enara_rodar/enara_rodar_1.png" id="2_sf3a1"]
+[ext_resource type="Texture2D" uid="uid://dnfas6kgv54ad" path="res://assets/animaciones/enara_rodar/enara_rodar_2.png" id="3_kqokq"]
+[ext_resource type="Texture2D" uid="uid://dy0wetkklahm0" path="res://assets/animaciones/enara_rodar/enara_rodar_3.png" id="4_7pvpy"]
+[ext_resource type="Texture2D" uid="uid://boaewcm0khxyd" path="res://assets/animaciones/enara_rodar/enara_rodar_4.png" id="5_heitv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(22, 36)
 
 [node name="enara" type="CharacterBody2D" unique_id=1882728851]
+collision_layer = 4
 script = ExtResource("1_daj2g")
 velocidad = 165.0
 salto = -260.0
 color_flecha = Color(0.98039216, 0.46666667, 0.4117647, 1)
+puede_agacharse = true
+texturas_bola = Array[Texture2D]([ExtResource("2_sf3a1"), ExtResource("3_kqokq"), ExtResource("4_7pvpy"), ExtResource("5_heitv")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=552429618]
 texture = ExtResource("2_daj2g")
@@ -18,3 +25,12 @@ texture = ExtResource("2_daj2g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1933617674]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_1d5kb")
+one_way_collision = true
+one_way_collision_margin = 4.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1765175028]
+process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 360
