@@ -11,7 +11,7 @@ Laia y Enara son dos hermanas que tienen que superar juntas los "pequeños grand
 Incluye:
 - Control de las dos hermanas y cambio entre ellas.
 - Laia: Salta más alto y puede empujar objetos.
-- Enara: Más rápida y puede rodar dando volteretas para pasar por huecos pequeños.
+- Enara: Corre más rápido y puede rodar dando volteretas para pasar por huecos pequeños.
 - Menú de título, menú de pausa (continuar, reiniciar, salir) y escena de créditos.
 - Meta final: El nivel termina cuando las dos hermanas llegan juntas.
 
@@ -27,10 +27,10 @@ Incluye:
 
 ## Cómo jugar
 
-**Opción 1: ejecutable (Windows)**
+**Opción 1: Ejecutable (Windows)**
 Descarga la última versión desde el apartado **Releases** de este repositorio y abre el archivo `.exe`.
 
-**Opción 2: desde Godot**
+**Opción 2: Desde Godot**
 1. Instala [Godot 4.7](https://godotengine.org/download).
 2. Clona o descarga este repositorio.
 3. En Godot, pulsa **Importar** y selecciona el archivo `project.godot`.

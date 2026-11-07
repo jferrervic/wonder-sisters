@@ -4,7 +4,7 @@ Para ver una copia de esta licencia, visita
 https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es
 
 Usted es libre de:
-- Compartir: copiar y redistribuir el material en cualquier medio o formato.
+- Compartir: Copiar y redistribuir el material en cualquier medio o formato.
 
 Bajo las condiciones siguientes:
 - Reconocimiento: Debe reconocer adecuadamente la autoría.
