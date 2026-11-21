@@ -9,53 +9,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(1280, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_em7hv"]
-size = Vector2(160, 44)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0e6o"]
-size = Vector2(10, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jon8"]
-size = Vector2(40, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqn35"]
-size = Vector2(24, 28)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jouii"]
 size = Vector2(10, 360)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sexnx"]
 size = Vector2(10, 360)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rca6x"]
-size = Vector2(160, 110)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_26pgj"]
-size = Vector2(30, 28)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkga6"]
-size = Vector2(30, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8p2b"]
-size = Vector2(30, 84)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_anof1"]
-size = Vector2(130, 112)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mta2"]
-size = Vector2(90, 8)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdg3d"]
-size = Vector2(90, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2lfq"]
-size = Vector2(60, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_440u6"]
-size = Vector2(30, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmd10"]
-size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vyihi"]
 size = Vector2(80, 10)
@@ -83,58 +41,6 @@ offset_bottom = 10.0
 
 [node name="Pausa" parent="." unique_id=23788049 instance=ExtResource("4_26pgj")]
 
-[node name="Cama" type="StaticBody2D" parent="." unique_id=866178476]
-position = Vector2(380, 308)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cama" unique_id=913240457]
-shape = SubResource("RectangleShape2D_em7hv")
-
-[node name="ColorRect" type="ColorRect" parent="Cama" unique_id=1191096299]
-offset_left = -80.0
-offset_top = -22.0
-offset_right = 80.0
-offset_bottom = 22.0
-
-[node name="Cabecero" type="StaticBody2D" parent="." unique_id=900553140]
-position = Vector2(455, 276)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabecero" unique_id=391010298]
-shape = SubResource("RectangleShape2D_l0e6o")
-
-[node name="ColorRect" type="ColorRect" parent="Cabecero" unique_id=684060974]
-offset_left = -5.0
-offset_top = -10.0
-offset_right = 5.0
-offset_bottom = 10.0
-
-[node name="Peluche" type="StaticBody2D" parent="." unique_id=823254607]
-position = Vector2(480, 315)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Peluche" unique_id=1560221715]
-shape = SubResource("RectangleShape2D_7jon8")
-
-[node name="ColorRect" type="ColorRect" parent="Peluche" unique_id=1387558241]
-offset_left = -20.0
-offset_top = -15.0
-offset_right = 20.0
-offset_bottom = 15.0
-color = Color(0.95686275, 0.6509804, 0.7529412, 1)
-
-[node name="Cojin" type="RigidBody2D" parent="." unique_id=1074555223]
-position = Vector2(380, 272)
-collision_mask = 7
-lock_rotation = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cojin" unique_id=1475813486]
-shape = SubResource("RectangleShape2D_dqn35")
-
-[node name="ColorRect" type="ColorRect" parent="Cojin" unique_id=2080022350]
-offset_left = -12.0
-offset_top = -14.0
-offset_right = 12.0
-offset_bottom = 14.0
-color = Color(0.6117647, 0.41960785, 0.23529412, 1)
-
 [node name="ParedIzq" type="StaticBody2D" parent="." unique_id=1667748594]
 position = Vector2(-5, 180)
 
@@ -147,155 +53,8 @@ position = Vector2(1285, 180)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedDer" unique_id=894658416]
 shape = SubResource("RectangleShape2D_sexnx")
 
-[node name="Ropero" type="StaticBody2D" parent="." unique_id=1315077138]
-position = Vector2(940, 245)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropero" unique_id=692929066]
-shape = SubResource("RectangleShape2D_rca6x")
-
-[node name="ColorRect" type="ColorRect" parent="Ropero" unique_id=1907134549]
-offset_left = -80.0
-offset_top = -55.0
-offset_right = 80.0
-offset_bottom = 55.0
-color = Color(0.54509807, 0.3529412, 0.23529412, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Escalon1" type="StaticBody2D" parent="." unique_id=1135115259]
-position = Vector2(1075, 316)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Escalon1" unique_id=996844880]
-shape = SubResource("RectangleShape2D_26pgj")
-
-[node name="ColorRect" type="ColorRect" parent="Escalon1" unique_id=1580854900]
-offset_left = -15.0
-offset_top = -14.0
-offset_right = 15.0
-offset_bottom = 14.0
-color = Color(0.7529412, 0.5411765, 0.3529412, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Escalon2" type="StaticBody2D" parent="." unique_id=1151613856]
-position = Vector2(1105, 302)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Escalon2" unique_id=1659355183]
-shape = SubResource("RectangleShape2D_dkga6")
-
-[node name="ColorRect" type="ColorRect" parent="Escalon2" unique_id=120536242]
-offset_left = -15.0
-offset_top = -28.0
-offset_right = 15.0
-offset_bottom = 28.0
-color = Color(0.7529412, 0.5411765, 0.3529412, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Escalon3" type="StaticBody2D" parent="." unique_id=272974290]
-position = Vector2(1135, 288)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Escalon3" unique_id=1585166588]
-shape = SubResource("RectangleShape2D_a8p2b")
-
-[node name="ColorRect" type="ColorRect" parent="Escalon3" unique_id=621803354]
-offset_left = -15.0
-offset_top = -42.0
-offset_right = 15.0
-offset_bottom = 42.0
-color = Color(0.7529412, 0.5411765, 0.3529412, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Escalon4" type="StaticBody2D" parent="." unique_id=566443169]
-position = Vector2(1215, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Escalon4" unique_id=1325328797]
-shape = SubResource("RectangleShape2D_anof1")
-
-[node name="ColorRect" type="ColorRect" parent="Escalon4" unique_id=1433191033]
-offset_left = -65.0
-offset_top = -56.0
-offset_right = 65.0
-offset_bottom = 56.0
-color = Color(0.7529412, 0.5411765, 0.3529412, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Estanteria" type="StaticBody2D" parent="." unique_id=2112440344]
-position = Vector2(1075, 194)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Estanteria" unique_id=1939004603]
-shape = SubResource("RectangleShape2D_1mta2")
-
-[node name="ColorRect" type="ColorRect" parent="Estanteria" unique_id=1670483131]
-offset_left = -45.0
-offset_top = -4.0
-offset_right = 45.0
-offset_bottom = 4.0
-color = Color(0.54509807, 0.3529412, 0.23529412, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Cajon1" type="StaticBody2D" parent="." unique_id=2139870851]
-visible = false
-position = Vector2(815, 288)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cajon1" unique_id=1698136340]
-shape = SubResource("RectangleShape2D_cdg3d")
-disabled = true
-one_way_collision = true
-one_way_collision_margin = 4.0
-
-[node name="ColorRect" type="ColorRect" parent="Cajon1" unique_id=1139138994]
-offset_left = -45.0
-offset_top = -12.0
-offset_right = 45.0
-offset_bottom = 12.0
-color = Color(0.7529412, 0.5411765, 0.3529412, 1)
-
-[node name="Cajon2" type="StaticBody2D" parent="." unique_id=1856448453]
-visible = false
-position = Vector2(830, 264)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cajon2" unique_id=1987900323]
-shape = SubResource("RectangleShape2D_y2lfq")
-disabled = true
-one_way_collision_margin = 4.0
-
-[node name="ColorRect" type="ColorRect" parent="Cajon2" unique_id=328061753]
-offset_left = -30.0
-offset_top = -12.0
-offset_right = 30.0
-offset_bottom = 12.0
-color = Color(0.7529412, 0.5411765, 0.3529412, 1)
-
-[node name="Cajon3" type="StaticBody2D" parent="." unique_id=1444682394]
-visible = false
-position = Vector2(845, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cajon3" unique_id=1793647214]
-shape = SubResource("RectangleShape2D_440u6")
-disabled = true
-one_way_collision_margin = 4.0
-
-[node name="ColorRect" type="ColorRect" parent="Cajon3" unique_id=1617626167]
-offset_left = -15.0
-offset_top = -12.0
-offset_right = 15.0
-offset_bottom = 12.0
-color = Color(0.7529412, 0.5411765, 0.3529412, 1)
-
-[node name="Boton" type="Area2D" parent="." unique_id=866753321]
-position = Vector2(876, 182)
-collision_mask = 5
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boton" unique_id=751054142]
-shape = SubResource("RectangleShape2D_cmd10")
-
-[node name="ColorRect" type="ColorRect" parent="Boton" unique_id=1121554011]
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
-color = Color(1, 0.8235294, 0.24705882, 1)
-
 [node name="Meta" type="Area2D" parent="." unique_id=2071823964]
-position = Vector2(1233, 213)
+position = Vector2(1233, 320)
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1375312002]
@@ -325,5 +84,3 @@ theme_override_fonts/font = ExtResource("5_dkga6")
 theme_override_font_sizes/font_size = 24
 text = "¡NIVEL COMPLETADO!"
 horizontal_alignment = 1
-
-[connection signal="body_entered" from="Boton" to="." method="_on_boton_body_entered"]

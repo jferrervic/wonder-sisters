@@ -1,0 +1,141 @@
+[gd_scene format=4 uid="uid://dg0lrqas2ex1m"]
+
+[ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_e1ihm"]
+[ext_resource type="Texture2D" uid="uid://du8dnl5gnheuo" path="res://assets/fondos/nivel3/3_3_caida_de_las_estrellas/fondo alto de la caída (1296 x 3840).png" id="2_my2qt"]
+[ext_resource type="TileSet" uid="uid://bhyw26gnrdko" path="res://assets/tilesets/tileset.tres" id="3_e1ihm"]
+[ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="4_m6o6k"]
+[ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="5_8jir8"]
+[ext_resource type="SpriteFrames" uid="uid://cwj4ya48tcvv" path="res://assets/animaciones/laia_pijama.tres" id="5_l7yle"]
+[ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="6_6fsem"]
+[ext_resource type="SpriteFrames" uid="uid://d1gaqxclmup4i" path="res://assets/animaciones/enara_pijama.tres" id="7_85okf"]
+[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="7_kajub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
+size = Vector2(640, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my2qt"]
+size = Vector2(200, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jouii"]
+size = Vector2(10, 1920)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sexnx"]
+size = Vector2(10, 1920)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vyihi"]
+size = Vector2(80, 10)
+
+[node name="Node2D" type="Node2D" unique_id=886577951]
+script = ExtResource("1_e1ihm")
+siguiente = "uid://c5nvhfcyywvys"
+caida_maxima = 255.0
+
+[node name="Fondos" type="Node2D" parent="." unique_id=862806088]
+
+[node name="capa1" type="TextureRect" parent="Fondos" unique_id=472967787]
+offset_top = 1.0
+offset_right = 640.0
+offset_bottom = 1921.0
+texture = ExtResource("2_my2qt")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1126351559]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAAAA4AAQAAAAYAAAABAA4AAQABAAYAAAACAA4AAQABAAYAAAADAA4AAQABAAYAAAAEAA4AAQABAAYAAAAFAA4AAQABAAYAAAAGAA4AAQABAAYAAAAHAA4AAQACAAYAAAAAAE8AAAABAAwAAAABAE8AAAABAAwAAAACAE8AAAABAAwAAAADAE8AAAABAAwAAAAEAE8AAAABAAwAAAAFAE8AAAABAAwAAAAGAE8AAAABAAwAAAAHAE8AAAABAAwAAAAIAE8AAAABAAwAAAAJAE8AAAABAAwAAAAKAE8AAAABAAwAAAALAE8AAAABAAwAAAAMAE8AAAABAAwAAAANAE8AAAABAAwAAAAOAE8AAAABAAwAAAD//08AAAABAAwAAAD+/08AAAABAAwAAAAPAE8AAAABAAwAAAAQAE8AAAABAAwAAAARAE8AAAABAAwAAAASAE8AAAABAAwAAAATAE8AAAABAAwAAAAUAE8AAAABAAwAAAAVAE8AAAABAAwAAAAWAE8AAAABAAwAAAAXAE8AAAABAAwAAAAYAE8AAAABAAwAAAAZAE8AAAABAAwAAAAaAE8AAAABAAwAAAAbAE8AAAABAAwAAAAcAE8AAAABAAwAAAA=")
+tile_set = ExtResource("3_e1ihm")
+
+[node name="laia" parent="." unique_id=1882728851 instance=ExtResource("4_m6o6k")]
+position = Vector2(60, 311)
+activa = false
+color_flecha = Color(0.5137255, 0.77254903, 0.9372549, 1)
+puede_agacharse = false
+ropa = ExtResource("5_l7yle")
+
+[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+limit_right = 640
+limit_bottom = 1920
+
+[node name="enara" parent="." unique_id=1322479456 instance=ExtResource("5_8jir8")]
+position = Vector2(120, 311)
+ropa = ExtResource("7_85okf")
+
+[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+limit_right = 640
+limit_bottom = 1920
+
+[node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
+visible = false
+position = Vector2(320, 1909)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo" unique_id=1336915179]
+shape = SubResource("RectangleShape2D_1d5kb")
+
+[node name="ColorRect" type="ColorRect" parent="suelo" unique_id=1644653441]
+offset_left = -320.0
+offset_top = -10.0
+offset_right = 320.0
+offset_bottom = 10.0
+
+[node name="suelo2" type="StaticBody2D" parent="." unique_id=1785050299]
+visible = false
+position = Vector2(100, 349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo2" unique_id=229140985]
+shape = SubResource("RectangleShape2D_my2qt")
+
+[node name="ColorRect" type="ColorRect" parent="suelo2" unique_id=1984152409]
+offset_left = -100.0
+offset_top = -10.0
+offset_right = 100.0
+offset_bottom = 10.0
+
+[node name="Pausa" parent="." unique_id=23788049 instance=ExtResource("6_6fsem")]
+visible = false
+
+[node name="ParedIzq" type="StaticBody2D" parent="." unique_id=1667748594]
+position = Vector2(-5, 960)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedIzq" unique_id=625583016]
+shape = SubResource("RectangleShape2D_jouii")
+
+[node name="ParedDer" type="StaticBody2D" parent="." unique_id=926944365]
+position = Vector2(645, 960)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedDer" unique_id=894658416]
+shape = SubResource("RectangleShape2D_sexnx")
+
+[node name="Meta" type="Area2D" parent="." unique_id=2071823964]
+position = Vector2(593, 1890)
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1375312002]
+shape = SubResource("RectangleShape2D_vyihi")
+
+[node name="ColorRect" type="ColorRect" parent="Meta" unique_id=258011573]
+offset_left = -40.0
+offset_top = -5.0
+offset_right = 40.0
+offset_bottom = 5.0
+color = Color(1, 1, 1, 0.2509804)
+
+[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+offset_top = 160.0
+offset_right = 640.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
+theme_override_fonts/font = ExtResource("7_kajub")
+theme_override_font_sizes/font_size = 24
+text = "¡NIVEL COMPLETADO!"
+horizontal_alignment = 1
+
+[editable path="laia"]
+[editable path="enara"]

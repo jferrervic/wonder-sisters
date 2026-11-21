@@ -1,0 +1,117 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cyxkkwgon2jqb"]
+
+[ext_resource type="Texture2D" uid="uid://405gvii55mmk" path="res://assets/personajes/enara/enara_calle/andar_1.png" id="1_h3kts"]
+[ext_resource type="Texture2D" uid="uid://hfxlog8yce30" path="res://assets/personajes/enara/enara_calle/andar_2.png" id="2_liav1"]
+[ext_resource type="Texture2D" uid="uid://br2i085cvc8m6" path="res://assets/personajes/enara/enara_calle/andar_3.png" id="3_bqrwe"]
+[ext_resource type="Texture2D" uid="uid://dpeti6rusfg06" path="res://assets/personajes/enara/enara_calle/andar_4.png" id="4_u7i56"]
+[ext_resource type="Texture2D" uid="uid://d3o6kwbhlnq6f" path="res://assets/personajes/enara/enara_calle/saltar_arriba.png" id="5_81cfr"]
+[ext_resource type="Texture2D" uid="uid://wwy4ajm4wgok" path="res://assets/personajes/enara/enara_calle/aterrizar.png" id="6_5dc54"]
+[ext_resource type="Texture2D" uid="uid://bjsglxoep6gsv" path="res://assets/personajes/enara/enara_calle/aterrizar_levantarse.png" id="7_bmvkw"]
+[ext_resource type="Texture2D" uid="uid://cvdx5ddeqqiqx" path="res://assets/personajes/enara/enara_calle/bola_1.png" id="8_8et5j"]
+[ext_resource type="Texture2D" uid="uid://o2o2ubrvtk5u" path="res://assets/personajes/enara/enara_calle/bola_2.png" id="9_4v86r"]
+[ext_resource type="Texture2D" uid="uid://x3ueasjv1384" path="res://assets/personajes/enara/enara_calle/bola_3.png" id="10_0lc7n"]
+[ext_resource type="Texture2D" uid="uid://ck8roq1ci2eat" path="res://assets/personajes/enara/enara_calle/bola_4.png" id="11_8kovm"]
+[ext_resource type="Texture2D" uid="uid://hn25vm74uvct" path="res://assets/personajes/enara/enara_calle/caer_1.png" id="12_4s43q"]
+[ext_resource type="Texture2D" uid="uid://cn1foic4lkmve" path="res://assets/personajes/enara/enara_calle/caer_2.png" id="13_3carc"]
+[ext_resource type="Texture2D" uid="uid://cqaqjsyp8em5q" path="res://assets/personajes/enara/enara_calle/celebrar.png" id="14_pkecw"]
+[ext_resource type="Texture2D" uid="uid://cl6ebo8iqn31b" path="res://assets/personajes/enara/enara_calle/quieta.png" id="15_8kc46"]
+[ext_resource type="Texture2D" uid="uid://bodpno8iuukwo" path="res://assets/personajes/enara/enara_calle/quieta_ojos.png" id="16_x2uma"]
+[ext_resource type="Texture2D" uid="uid://mpxoh3q5x5ld" path="res://assets/personajes/enara/enara_calle/saltar_impulso.png" id="17_7nd3u"]
+[ext_resource type="Texture2D" uid="uid://b1gj2r6ylb3oq" path="res://assets/personajes/enara/enara_calle/saltar_subir.png" id="18_n5if6"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h3kts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_liav1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bqrwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u7i56")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_81cfr")
+}],
+"loop": 1,
+"name": &"arriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5dc54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bmvkw")
+}],
+"loop": 0,
+"name": &"aterrizar",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8et5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4v86r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0lc7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8kovm")
+}],
+"loop": 1,
+"name": &"bola",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_4s43q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3carc")
+}],
+"loop": 0,
+"name": &"caer",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_pkecw")
+}],
+"loop": 1,
+"name": &"celebrar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("15_8kc46")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_x2uma")
+}],
+"loop": 1,
+"name": &"quieta",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_7nd3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_n5if6")
+}],
+"loop": 0,
+"name": &"saltar",
+"speed": 10.0
+}]

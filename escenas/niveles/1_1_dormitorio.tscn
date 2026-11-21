@@ -1,0 +1,133 @@
+[gd_scene format=4 uid="uid://ywyeh71lsddu"]
+
+[ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_u0inm"]
+[ext_resource type="Texture2D" uid="uid://cqa7x8opfnpq1" path="res://assets/fondos/nivel1/1_1_dormitorio/1 edificios.png" id="2_qd684"]
+[ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="2_xcrfq"]
+[ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="3_i5auh"]
+[ext_resource type="Texture2D" uid="uid://uiq2wd6607s7" path="res://assets/fondos/nivel1/1_1_dormitorio/2 pared y pasillo.png" id="3_qd684"]
+[ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="4_lc7g6"]
+[ext_resource type="TileSet" uid="uid://bhyw26gnrdko" path="res://assets/tilesets/tileset.tres" id="4_t2hkd"]
+[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="5_0c8k6"]
+[ext_resource type="SpriteFrames" uid="uid://cwj4ya48tcvv" path="res://assets/animaciones/laia_pijama.tres" id="6_el04w"]
+[ext_resource type="SpriteFrames" uid="uid://d1gaqxclmup4i" path="res://assets/animaciones/enara_pijama.tres" id="8_0h521"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
+size = Vector2(1680, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jouii"]
+size = Vector2(10, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sexnx"]
+size = Vector2(10, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vyihi"]
+size = Vector2(80, 10)
+
+[node name="Node2D" type="Node2D" unique_id=886577951]
+script = ExtResource("1_u0inm")
+siguiente = "uid://danreftcw5g0i"
+
+[node name="Fondos" type="Node2D" parent="." unique_id=862806088]
+
+[node name="Parallax2D" type="Parallax2D" parent="Fondos" unique_id=254872189]
+scroll_scale = Vector2(0.5, 0)
+repeat_size = Vector2(1224, 0)
+
+[node name="capa1" type="TextureRect" parent="Fondos/Parallax2D" unique_id=472967787]
+offset_right = 1224.0
+offset_bottom = 360.0
+texture = ExtResource("2_qd684")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="capa2" type="TextureRect" parent="Fondos" unique_id=975500608]
+offset_right = 1680.0
+offset_bottom = 360.0
+texture = ExtResource("3_qd684")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=903225545]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAABAA4AAAANAAwAAAACAA4AAAANAAwAAAADAA4AAAANAAwAAAAEAA4AAAANAAwAAAAFAA4AAAANAAwAAAAGAA4AAAANAAwAAAAHAA4AAAANAAwAAAAIAA4AAAANAAwAAAAJAA4AAAANAAwAAAAKAA4AAAANAAwAAAALAA4AAAANAAwAAAAMAA4AAAANAAwAAAANAA4AAAANAAwAAAAOAA4AAAANAAwAAAAPAA4AAAANAAwAAAAQAA4AAAANAAwAAAARAA4AAAANAAwAAAASAA4AAAANAAwAAAATAA4AAAANAAwAAAAUAA4AAAANAAwAAAAVAA4AAAANAAwAAAAWAA4AAAANAAwAAAAXAA4AAAANAAwAAAAYAA4AAAANAAwAAAAZAA4AAAANAAwAAAAaAA4AAAANAAwAAAAbAA4AAAANAAwAAAAcAA4AAAANAAwAAAAdAA4AAAANAAwAAAAeAA4AAAANAAwAAAAfAA4AAAANAAwAAAAgAA4AAAANAAwAAAAhAA4AAAANAAwAAAAiAA4AAAANAAwAAAAjAA4AAAANAAwAAAAkAA4AAAANAAwAAAAlAA4AAAANAAwAAAAmAA4AAAANAAwAAAAnAA4AAAANAAwAAAAoAA4AAAANAAwAAAApAA4AAAANAAwAAAAqAA4AAAANAAwAAAArAA4AAAANAAwAAAAsAA4AAAANAAwAAAAtAA4AAAANAAwAAAAuAA4AAAANAAwAAAAvAA4AAAANAAwAAAAwAA4AAAANAAwAAAAxAA4AAAANAAwAAAAyAA4AAAANAAwAAAAzAA4AAAANAAwAAAA0AA4AAAANAAwAAAA1AA4AAAANAAwAAAA2AA4AAAANAAwAAAA3AA4AAAANAAwAAAA4AA4AAAANAAwAAAA5AA4AAAANAAwAAAA6AA4AAAANAAwAAAA7AA4AAAANAAwAAAA8AA4AAAANAAwAAAA9AA4AAAANAAwAAAA+AA4AAAANAAwAAAA/AA4AAAANAAwAAABAAA4AAAANAAwAAABBAA4AAAANAAwAAABCAA4AAAANAAwAAABDAA4AAAANAAwAAABEAA4AAAANAAwAAABFAA4AAAANAAwAAAAAAA4AAAANAAwAAAD//w4AAAANAAwAAABGAA4AAAANAAwAAAA=")
+tile_set = ExtResource("4_t2hkd")
+
+[node name="laia" parent="." unique_id=1882728851 instance=ExtResource("2_xcrfq")]
+position = Vector2(100, 311)
+activa = false
+color_flecha = Color(0.5137255, 0.77254903, 0.9372549, 1)
+puede_agacharse = false
+ropa = ExtResource("6_el04w")
+
+[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+limit_right = 1680
+
+[node name="enara" parent="." unique_id=1322479456 instance=ExtResource("3_i5auh")]
+position = Vector2(160, 311)
+ropa = ExtResource("8_0h521")
+
+[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+limit_right = 1680
+
+[node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
+position = Vector2(840, 349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo" unique_id=1336915179]
+shape = SubResource("RectangleShape2D_1d5kb")
+
+[node name="ColorRect" type="ColorRect" parent="suelo" unique_id=1644653441]
+visible = false
+offset_left = -840.0
+offset_top = -10.0
+offset_right = 840.0
+offset_bottom = 10.0
+
+[node name="Pausa" parent="." unique_id=23788049 instance=ExtResource("4_lc7g6")]
+visible = false
+
+[node name="ParedIzq" type="StaticBody2D" parent="." unique_id=1667748594]
+position = Vector2(-5, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedIzq" unique_id=625583016]
+shape = SubResource("RectangleShape2D_jouii")
+
+[node name="ParedDer" type="StaticBody2D" parent="." unique_id=926944365]
+position = Vector2(1685, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedDer" unique_id=894658416]
+shape = SubResource("RectangleShape2D_sexnx")
+
+[node name="Meta" type="Area2D" parent="." unique_id=2071823964]
+position = Vector2(1633, 330)
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1375312002]
+shape = SubResource("RectangleShape2D_vyihi")
+
+[node name="ColorRect" type="ColorRect" parent="Meta" unique_id=258011573]
+offset_left = -40.0
+offset_top = -5.0
+offset_right = 40.0
+offset_bottom = 5.0
+color = Color(1, 1, 1, 0.2509804)
+
+[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+offset_top = 160.0
+offset_right = 640.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
+theme_override_fonts/font = ExtResource("5_0c8k6")
+theme_override_font_sizes/font_size = 24
+text = "¡NIVEL COMPLETADO!"
+horizontal_alignment = 1
+
+[editable path="laia"]
+[editable path="enara"]

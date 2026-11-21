@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dlm4wrtii4xe1"]
 
-[ext_resource type="Texture2D" uid="uid://btc4vxsy7kk51" path="res://assets/laia.png" id="1_sx140"]
-[ext_resource type="Script" uid="uid://bawe5vpyd7n2t" path="res://escenas/hermana.gd" id="1_yddr7"]
+[ext_resource type="Script" uid="uid://bawe5vpyd7n2t" path="res://scripts/hermana.gd" id="1_yddr7"]
+[ext_resource type="Texture2D" uid="uid://b2r8mkstalp45" path="res://assets/tilesets/sombra_pies.png" id="2_53mtw"]
+[ext_resource type="SpriteFrames" uid="uid://ca5w3hlvah08v" path="res://assets/animaciones/laia_calle.tres" id="2_yddr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
-size = Vector2(22, 40)
+size = Vector2(17, 44)
 
 [node name="laia" type="CharacterBody2D" unique_id=1882728851]
 collision_layer = 2
@@ -14,11 +15,19 @@ velocidad = 140.0
 salto = -330.0
 puede_empujar = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=552429618]
-texture = ExtResource("1_sx140")
+[node name="Sombra" type="Sprite2D" parent="." unique_id=1886905783]
+position = Vector2(-2, 24)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_53mtw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=94055835]
+position = Vector2(0, -2.5)
+scale = Vector2(0.25, 0.25)
+sprite_frames = ExtResource("2_yddr7")
+animation = &"quieta"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1933617674]
-position = Vector2(1, 3)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_1d5kb")
 one_way_collision_margin = 4.0
 

@@ -7,7 +7,7 @@ func _ready() -> void:
 
 ##LOGICA BOTON REINICIAR##
 func _on_reiniciar() -> void:
-	get_tree().change_scene_to_file("res://escenas/main.tscn")
+	get_tree().change_scene_to_file("res://escenas/niveles/1_1_dormitorio.tscn")
 
 func _on_salir() -> void:
 	get_tree().quit()

@@ -1,0 +1,126 @@
+[gd_scene format=4 uid="uid://ci31a8tenncod"]
+
+[ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_v8g70"]
+[ext_resource type="Texture2D" uid="uid://crhfj5o73re1n" path="res://assets/fondos/nivel2/2_2_interior_colegio/1 aulas.png" id="2_v8g70"]
+[ext_resource type="Texture2D" uid="uid://cb4cbar7hyr0g" path="res://assets/fondos/nivel2/2_2_interior_colegio/2 pasillo.png" id="3_g67l6"]
+[ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="4_43mbd"]
+[ext_resource type="TileSet" uid="uid://bhyw26gnrdko" path="res://assets/tilesets/tileset.tres" id="4_g67l6"]
+[ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="5_tmcbi"]
+[ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="6_pw5o5"]
+[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="7_l1lxo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
+size = Vector2(2172, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jouii"]
+size = Vector2(10, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sexnx"]
+size = Vector2(10, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vyihi"]
+size = Vector2(80, 10)
+
+[node name="Node2D" type="Node2D" unique_id=886577951]
+script = ExtResource("1_v8g70")
+siguiente = "uid://uryvs0ohwxkk"
+
+[node name="Fondos" type="Node2D" parent="." unique_id=862806088]
+
+[node name="Parallax2D" type="Parallax2D" parent="Fondos" unique_id=1469876242]
+scroll_scale = Vector2(0.95, 1)
+
+[node name="InteriorAulas" type="TextureRect" parent="Fondos/Parallax2D" unique_id=472967787]
+offset_top = -42.0
+offset_right = 2172.0
+offset_bottom = 318.0
+texture = ExtResource("2_v8g70")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="capa2" type="TextureRect" parent="Fondos" unique_id=975500608]
+offset_right = 2172.0
+offset_bottom = 360.0
+texture = ExtResource("3_g67l6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1205178796]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAABAA4AAAAJAAgAAAACAA4AAAAJAAgAAAADAA4AAAAJAAgAAAAEAA4AAAAJAAgAAAAFAA4AAAAJAAgAAAAGAA4AAAAJAAgAAAAHAA4AAAAJAAgAAAAIAA4AAAAJAAgAAAAJAA4AAAAJAAgAAAAKAA4AAAAJAAgAAAALAA4AAAAJAAgAAAAMAA4AAAAJAAgAAAANAA4AAAAJAAgAAAAOAA4AAAAJAAgAAAAPAA4AAAAJAAgAAAAQAA4AAAAJAAgAAAARAA4AAAAJAAgAAAASAA4AAAAJAAgAAAATAA4AAAAJAAgAAAAUAA4AAAAJAAgAAAAVAA4AAAAJAAgAAAAWAA4AAAAJAAgAAAAXAA4AAAAJAAgAAAAYAA4AAAAJAAgAAAAZAA4AAAAJAAgAAAAaAA4AAAAJAAgAAAAbAA4AAAAJAAgAAAAcAA4AAAAJAAgAAAAdAA4AAAAJAAgAAAAeAA4AAAAJAAgAAAAfAA4AAAAJAAgAAAAgAA4AAAAJAAgAAAAhAA4AAAAJAAgAAAAiAA4AAAAJAAgAAAAjAA4AAAAJAAgAAAAkAA4AAAAJAAgAAAAlAA4AAAAJAAgAAAAmAA4AAAAJAAgAAAAnAA4AAAAJAAgAAAAoAA4AAAAJAAgAAAApAA4AAAAJAAgAAAAqAA4AAAAJAAgAAAArAA4AAAAJAAgAAAAsAA4AAAAJAAgAAAAtAA4AAAAJAAgAAAAuAA4AAAAJAAgAAAAvAA4AAAAJAAgAAAAwAA4AAAAJAAgAAAAxAA4AAAAJAAgAAAAyAA4AAAAJAAgAAAAzAA4AAAAJAAgAAAA0AA4AAAAJAAgAAAA1AA4AAAAJAAgAAAA2AA4AAAAJAAgAAAA3AA4AAAAJAAgAAAA4AA4AAAAJAAgAAAA5AA4AAAAJAAgAAAA6AA4AAAAJAAgAAAA7AA4AAAAJAAgAAAA8AA4AAAAJAAgAAAA9AA4AAAAJAAgAAAA+AA4AAAAJAAgAAAA/AA4AAAAJAAgAAABAAA4AAAAJAAgAAABBAA4AAAAJAAgAAABCAA4AAAAJAAgAAABDAA4AAAAJAAgAAABEAA4AAAAJAAgAAABFAA4AAAAJAAgAAAAAAA4AAAAJAAgAAAD//w4AAAAJAAgAAABGAA4AAAAJAAgAAABHAA4AAAAJAAgAAABIAA4AAAAJAAgAAABJAA4AAAAJAAgAAABKAA4AAAAJAAgAAABLAA4AAAAJAAgAAABMAA4AAAAJAAgAAABNAA4AAAAJAAgAAABOAA4AAAAJAAgAAABPAA4AAAAJAAgAAABQAA4AAAAJAAgAAABRAA4AAAAJAAgAAABSAA4AAAAJAAgAAABTAA4AAAAJAAgAAABUAA4AAAAJAAgAAABVAA4AAAAJAAgAAABWAA4AAAAJAAgAAABXAA4AAAAJAAgAAABYAA4AAAAJAAgAAABZAA4AAAAJAAgAAABaAA4AAAAJAAgAAABbAA4AAAAJAAgAAABcAA4AAAAJAAgAAAD+/w4AAAAJAAgAAAA=")
+tile_set = ExtResource("4_g67l6")
+
+[node name="laia" parent="." unique_id=1882728851 instance=ExtResource("4_43mbd")]
+position = Vector2(100, 311)
+
+[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+limit_right = 2172
+
+[node name="enara" parent="." unique_id=1322479456 instance=ExtResource("5_tmcbi")]
+position = Vector2(160, 311)
+
+[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+limit_right = 2172
+
+[node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
+visible = false
+position = Vector2(1086, 349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo" unique_id=1336915179]
+shape = SubResource("RectangleShape2D_1d5kb")
+
+[node name="ColorRect" type="ColorRect" parent="suelo" unique_id=1644653441]
+offset_left = -1086.0
+offset_top = -10.0
+offset_right = 1086.0
+offset_bottom = 10.0
+
+[node name="Pausa" parent="." unique_id=23788049 instance=ExtResource("6_pw5o5")]
+visible = false
+
+[node name="ParedIzq" type="StaticBody2D" parent="." unique_id=1667748594]
+position = Vector2(-5, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedIzq" unique_id=625583016]
+shape = SubResource("RectangleShape2D_jouii")
+
+[node name="ParedDer" type="StaticBody2D" parent="." unique_id=926944365]
+position = Vector2(2177, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedDer" unique_id=894658416]
+shape = SubResource("RectangleShape2D_sexnx")
+
+[node name="Meta" type="Area2D" parent="." unique_id=2071823964]
+position = Vector2(2125, 330)
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1375312002]
+shape = SubResource("RectangleShape2D_vyihi")
+
+[node name="ColorRect" type="ColorRect" parent="Meta" unique_id=258011573]
+offset_left = -40.0
+offset_top = -5.0
+offset_right = 40.0
+offset_bottom = 5.0
+color = Color(1, 1, 1, 0.2509804)
+
+[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+offset_top = 160.0
+offset_right = 640.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
+theme_override_fonts/font = ExtResource("7_l1lxo")
+theme_override_font_sizes/font_size = 24
+text = "¡NIVEL COMPLETADO!"
+horizontal_alignment = 1
+
+[editable path="laia"]
+[editable path="enara"]

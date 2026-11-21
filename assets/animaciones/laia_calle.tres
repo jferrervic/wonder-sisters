@@ -1,0 +1,117 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ca5w3hlvah08v"]
+
+[ext_resource type="Texture2D" uid="uid://mjm3uvrnndbe" path="res://assets/personajes/laia/laia_calle/andar_1.png" id="1_44ljh"]
+[ext_resource type="Texture2D" uid="uid://diil43dlxatve" path="res://assets/personajes/laia/laia_calle/andar_2.png" id="2_tsdc5"]
+[ext_resource type="Texture2D" uid="uid://brg7vnhye7qnl" path="res://assets/personajes/laia/laia_calle/andar_3.png" id="3_rq66l"]
+[ext_resource type="Texture2D" uid="uid://bkh7jgm7651pa" path="res://assets/personajes/laia/laia_calle/andar_4.png" id="4_8gpjf"]
+[ext_resource type="Texture2D" uid="uid://cmgcjhnqu7yh4" path="res://assets/personajes/laia/laia_calle/saltar_arriba.png" id="5_hdeg4"]
+[ext_resource type="Texture2D" uid="uid://btaduigok7hr" path="res://assets/personajes/laia/laia_calle/aterrizar.png" id="6_0ctk7"]
+[ext_resource type="Texture2D" uid="uid://ce5ebo7rq7in0" path="res://assets/personajes/laia/laia_calle/aterrizar_levantarse.png" id="7_pb1vf"]
+[ext_resource type="Texture2D" uid="uid://bcmbtsdj5oq1o" path="res://assets/personajes/laia/laia_calle/caer_1.png" id="8_oywwl"]
+[ext_resource type="Texture2D" uid="uid://dedmw2hnvqgjt" path="res://assets/personajes/laia/laia_calle/caer_2.png" id="9_3sbxy"]
+[ext_resource type="Texture2D" uid="uid://bkf605tevv2gi" path="res://assets/personajes/laia/laia_calle/celebrar.png" id="10_brj7c"]
+[ext_resource type="Texture2D" uid="uid://c6rfckexydl3e" path="res://assets/personajes/laia/laia_calle/empujar_1.png" id="11_q27jc"]
+[ext_resource type="Texture2D" uid="uid://harnv83rmlhd" path="res://assets/personajes/laia/laia_calle/empujar_2.png" id="12_xk33s"]
+[ext_resource type="Texture2D" uid="uid://bcuhdvsafwy2w" path="res://assets/personajes/laia/laia_calle/empujar_3.png" id="13_5i12d"]
+[ext_resource type="Texture2D" uid="uid://dm25bjfb15bqx" path="res://assets/personajes/laia/laia_calle/empujar_4.png" id="14_ldfb1"]
+[ext_resource type="Texture2D" uid="uid://b7fnhtwh7uge6" path="res://assets/personajes/laia/laia_calle/quieta.png" id="15_8avbt"]
+[ext_resource type="Texture2D" uid="uid://e5h8qggklrpm" path="res://assets/personajes/laia/laia_calle/quieta_ojos.png" id="16_q686a"]
+[ext_resource type="Texture2D" uid="uid://daa56ti6wgh37" path="res://assets/personajes/laia/laia_calle/saltar_impulso.png" id="17_imh0b"]
+[ext_resource type="Texture2D" uid="uid://dcg72148p8aqq" path="res://assets/personajes/laia/laia_calle/saltar_subir.png" id="18_7bbmx"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_44ljh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tsdc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rq66l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8gpjf")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_hdeg4")
+}],
+"loop": 1,
+"name": &"arriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0ctk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pb1vf")
+}],
+"loop": 0,
+"name": &"aterrizar",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_oywwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3sbxy")
+}],
+"loop": 0,
+"name": &"caer",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_brj7c")
+}],
+"loop": 1,
+"name": &"celebrar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_q27jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xk33s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5i12d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ldfb1")
+}],
+"loop": 1,
+"name": &"empujar",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("15_8avbt")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_q686a")
+}],
+"loop": 1,
+"name": &"quieta",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_imh0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7bbmx")
+}],
+"loop": 0,
+"name": &"saltar",
+"speed": 10.0
+}]

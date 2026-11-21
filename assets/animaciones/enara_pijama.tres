@@ -1,0 +1,117 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://d1gaqxclmup4i"]
+
+[ext_resource type="Texture2D" uid="uid://dr1ok6t2mk4r7" path="res://assets/personajes/enara/enara_pijama/andar_1.png" id="1_mxjbp"]
+[ext_resource type="Texture2D" uid="uid://dvnfj6judqdix" path="res://assets/personajes/enara/enara_pijama/andar_2.png" id="2_mfv0n"]
+[ext_resource type="Texture2D" uid="uid://cdag5slj2ow46" path="res://assets/personajes/enara/enara_pijama/andar_3.png" id="3_h2ce5"]
+[ext_resource type="Texture2D" uid="uid://dx2t022oppf1u" path="res://assets/personajes/enara/enara_pijama/andar_4.png" id="4_0nogk"]
+[ext_resource type="Texture2D" uid="uid://d2ap5nfyv8dc4" path="res://assets/personajes/enara/enara_pijama/saltar_arriba.png" id="5_a744x"]
+[ext_resource type="Texture2D" uid="uid://cboetk22pkfn7" path="res://assets/personajes/enara/enara_pijama/aterrizar.png" id="6_ag7ht"]
+[ext_resource type="Texture2D" uid="uid://doirbqr2atbqg" path="res://assets/personajes/enara/enara_pijama/aterrizar_levantarse.png" id="7_jdloa"]
+[ext_resource type="Texture2D" uid="uid://cvffyvialer81" path="res://assets/personajes/enara/enara_pijama/bola_1.png" id="8_8bcmh"]
+[ext_resource type="Texture2D" uid="uid://d02mn7p1ntt31" path="res://assets/personajes/enara/enara_pijama/bola_2.png" id="9_3lpw5"]
+[ext_resource type="Texture2D" uid="uid://dlr3sr2f4gd44" path="res://assets/personajes/enara/enara_pijama/bola_3.png" id="10_tdygc"]
+[ext_resource type="Texture2D" uid="uid://chkvhmp1v1yma" path="res://assets/personajes/enara/enara_pijama/bola_4.png" id="11_2n8j8"]
+[ext_resource type="Texture2D" uid="uid://dnvn1hlbctkg1" path="res://assets/personajes/enara/enara_pijama/caer_1.png" id="12_rcyoq"]
+[ext_resource type="Texture2D" uid="uid://dyybax5i5ffji" path="res://assets/personajes/enara/enara_pijama/caer_2.png" id="13_lkydi"]
+[ext_resource type="Texture2D" uid="uid://nthbjvmatib0" path="res://assets/personajes/enara/enara_pijama/celebrar.png" id="14_vikq8"]
+[ext_resource type="Texture2D" uid="uid://bhtmdbkks2k3l" path="res://assets/personajes/enara/enara_pijama/quieta.png" id="15_ucwpq"]
+[ext_resource type="Texture2D" uid="uid://by7agaag2rxv7" path="res://assets/personajes/enara/enara_pijama/quieta_ojos.png" id="16_h3p1t"]
+[ext_resource type="Texture2D" uid="uid://dja43mxsv6ill" path="res://assets/personajes/enara/enara_pijama/saltar_impulso.png" id="17_0gyhb"]
+[ext_resource type="Texture2D" uid="uid://bb1np2d87ory" path="res://assets/personajes/enara/enara_pijama/saltar_subir.png" id="18_y4mfa"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mxjbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mfv0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h2ce5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0nogk")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_a744x")
+}],
+"loop": 1,
+"name": &"arriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ag7ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jdloa")
+}],
+"loop": 0,
+"name": &"aterrizar",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8bcmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3lpw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tdygc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2n8j8")
+}],
+"loop": 1,
+"name": &"bola",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_rcyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lkydi")
+}],
+"loop": 0,
+"name": &"caer",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_vikq8")
+}],
+"loop": 1,
+"name": &"celebrar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("15_ucwpq")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_h3p1t")
+}],
+"loop": 1,
+"name": &"quieta",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_0gyhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_y4mfa")
+}],
+"loop": 0,
+"name": &"saltar",
+"speed": 10.0
+}]
