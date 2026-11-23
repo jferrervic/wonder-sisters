@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dihxldfpxsuwq"]
+
+[ext_resource type="Texture2D" uid="uid://c6ck42cchbvhu" path="res://assets/enemigos/saltador/bacteria/morir_1.png" id="1_87rtf"]
+[ext_resource type="Texture2D" uid="uid://ce6gbdm0jcjmi" path="res://assets/enemigos/saltador/bacteria/morir_2.png" id="2_1s2f3"]
+[ext_resource type="Texture2D" uid="uid://kbfbvgdqgtpm" path="res://assets/enemigos/saltador/bacteria/saltar_1.png" id="3_hfhvu"]
+[ext_resource type="Texture2D" uid="uid://cls7g4e5a8moh" path="res://assets/enemigos/saltador/bacteria/saltar_2.png" id="4_kwgr3"]
+[ext_resource type="Texture2D" uid="uid://bwdwoa1l10ojr" path="res://assets/enemigos/saltador/bacteria/saltar_3.png" id="5_4o3ig"]
+[ext_resource type="Texture2D" uid="uid://bplgf1t67au00" path="res://assets/enemigos/saltador/bacteria/saltar_4.png" id="6_rc2ym"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_rc2ym")
+}],
+"loop": 0,
+"name": &"caer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kwgr3")
+}],
+"loop": 0,
+"name": &"impulso",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_87rtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1s2f3")
+}],
+"loop": 0,
+"name": &"morir",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hfhvu")
+}],
+"loop": 0,
+"name": &"reposo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4o3ig")
+}],
+"loop": 0,
+"name": &"subir",
+"speed": 5.0
+}]

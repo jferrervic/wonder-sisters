@@ -7,8 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="4_xb355"]
 [ext_resource type="TileSet" uid="uid://bhyw26gnrdko" path="res://assets/tilesets/tileset.tres" id="5_brifi"]
 [ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="5_kksau"]
+[ext_resource type="PackedScene" uid="uid://dg0q8xdvolrdg" path="res://escenas/hud.tscn" id="5_tihyl"]
 [ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="6_agih7"]
-[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="7_dc5gy"]
+[ext_resource type="PackedScene" uid="uid://dm0cxqoxpscql" path="res://escenas/enemigo_volador.tscn" id="6_xb355"]
+[ext_resource type="PackedScene" uid="uid://ck0oyj2ljlx48" path="res://escenas/enemigo_centinela.tscn" id="10_agih7"]
+[ext_resource type="PackedScene" uid="uid://duns4aqaksm6s" path="res://escenas/enemigo_saltador.tscn" id="11_dc5gy"]
+[ext_resource type="SpriteFrames" uid="uid://djvrqcac3hwsa" path="res://assets/animaciones/mosca.tres" id="13_dc5gy"]
+[ext_resource type="FontFile" uid="uid://cu74p4eqjhv2o" path="res://assets/fuentes/LuckiestGuy-Regular.ttf" id="14_tihyl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(1440, 20)
@@ -62,6 +67,8 @@ texture = ExtResource("4_kksau")
 expand_mode = 1
 stretch_mode = 6
 
+[node name="HUD" parent="." unique_id=1315079986 instance=ExtResource("5_tihyl")]
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=237423464]
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAABAA4AAAANAAgAAAACAA4AAAANAAgAAAADAA4AAAANAAgAAAAEAA4AAAANAAgAAAAFAA4AAAANAAgAAAAGAA4AAAANAAgAAAAHAA4AAAANAAgAAAAIAA4AAAANAAgAAAAJAA4AAAANAAgAAAAKAA4AAAANAAgAAAALAA4AAAANAAgAAAAMAA4AAAANAAgAAAANAA4AAAANAAgAAAAOAA4AAAANAAgAAAAPAA4AAAANAAgAAAAQAA4AAAANAAgAAAARAA4AAAANAAgAAAASAA4AAAANAAgAAAATAA4AAAANAAgAAAAUAA4AAAANAAgAAAAVAA4AAAANAAgAAAAWAA4AAAANAAgAAAAXAA4AAAANAAgAAAAYAA4AAAANAAgAAAAZAA4AAAANAAgAAAAaAA4AAAANAAgAAAAbAA4AAAANAAgAAAAcAA4AAAANAAgAAAAdAA4AAAANAAgAAAAeAA4AAAANAAgAAAAfAA4AAAANAAgAAAAgAA4AAAANAAgAAAAhAA4AAAANAAgAAAAiAA4AAAANAAgAAAAjAA4AAAANAAgAAAAkAA4AAAANAAgAAAAlAA4AAAANAAgAAAAmAA4AAAANAAgAAAAnAA4AAAANAAgAAAAoAA4AAAANAAgAAAApAA4AAAANAAgAAAAqAA4AAAANAAgAAAArAA4AAAANAAgAAAAsAA4AAAANAAgAAAAtAA4AAAANAAgAAAAuAA4AAAANAAgAAAAvAA4AAAANAAgAAAAwAA4AAAANAAgAAAAxAA4AAAANAAgAAAAyAA4AAAANAAgAAAAzAA4AAAANAAgAAAA0AA4AAAANAAgAAAA1AA4AAAANAAgAAAA2AA4AAAANAAgAAAA3AA4AAAANAAgAAAA4AA4AAAANAAgAAAA5AA4AAAANAAgAAAA6AA4AAAANAAgAAAA7AA4AAAANAAgAAAA8AA4AAAANAAgAAAA9AA4AAAANAAgAAAA+AA4AAAANAAgAAAA/AA4AAAANAAgAAABAAA4AAAANAAgAAABBAA4AAAANAAgAAABCAA4AAAANAAgAAABDAA4AAAANAAgAAABEAA4AAAANAAgAAABFAA4AAAANAAgAAAAAAA4AAAANAAgAAAD//w4AAAANAAgAAABGAA4AAAANAAgAAABHAA4AAAANAAgAAABIAA4AAAANAAgAAABJAA4AAAANAAgAAABKAA4AAAANAAgAAABLAA4AAAANAAgAAABMAA4AAAANAAgAAABNAA4AAAANAAgAAABWAA4AAAANAAgAAABVAA4AAAANAAgAAABUAA4AAAANAAgAAABTAA4AAAANAAgAAABSAA4AAAANAAgAAABRAA4AAAANAAgAAABQAA4AAAANAAgAAABPAA4AAAANAAgAAABOAA4AAAANAAgAAABXAA4AAAANAAgAAABYAA4AAAANAAgAAABZAA4AAAANAAgAAABaAA4AAAANAAgAAABbAA4AAAANAAgAAAA=")
@@ -70,13 +77,13 @@ tile_set = ExtResource("5_brifi")
 [node name="laia" parent="." unique_id=1882728851 instance=ExtResource("4_xb355")]
 position = Vector2(100, 311)
 
-[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+[node name="Camera2D" parent="laia" index="3" unique_id=512137502]
 limit_right = 1440
 
 [node name="enara" parent="." unique_id=1322479456 instance=ExtResource("5_kksau")]
 position = Vector2(160, 311)
 
-[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+[node name="Camera2D" parent="enara" index="3" unique_id=1765175028]
 limit_right = 1440
 
 [node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
@@ -121,23 +128,45 @@ offset_right = 40.0
 offset_bottom = 5.0
 color = Color(1, 1, 1, 0.2509804)
 
-[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+[node name="EnemigoCentinela" parent="." unique_id=279937684 instance=ExtResource("10_agih7")]
+position = Vector2(312, 334)
+
+[node name="EnemigoSaltador" parent="." unique_id=1304381260 instance=ExtResource("11_dc5gy")]
+position = Vector2(364, 334)
+
+[node name="EnemigoVolador" parent="." unique_id=522034058 instance=ExtResource("6_xb355")]
+position = Vector2(418, 324)
+
+[node name="EnemigoVolador2" parent="." unique_id=13228503 instance=ExtResource("6_xb355")]
+position = Vector2(464, 324)
+
+[node name="AnimatedSprite2D" parent="EnemigoVolador2" index="0" unique_id=2019907348]
+sprite_frames = ExtResource("13_dc5gy")
+
+[node name="Completado" type="CanvasLayer" parent="." unique_id=1000607364]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=638637934]
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+[node name="Label" type="Label" parent="Completado" unique_id=411832743]
 offset_top = 160.0
 offset_right = 640.0
 offset_bottom = 200.0
-theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
-theme_override_fonts/font = ExtResource("7_dc5gy")
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.8392157, 0.3529412, 1)
+theme_override_colors/font_shadow_color = Color(0.2901961, 0.17254902, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.078431375, 0.11764706, 0.27450982, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("14_tihyl")
+theme_override_font_sizes/font_size = 38
 text = "¡NIVEL COMPLETADO!"
 horizontal_alignment = 1
 
 [editable path="laia"]
 [editable path="enara"]
+[editable path="EnemigoVolador2"]

@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cdv3l6mx2ale"]
+
+[ext_resource type="Texture2D" uid="uid://6pi6g208gqlq" path="res://assets/enemigos/volador/abeja/morir_1.png" id="1_2kj2c"]
+[ext_resource type="Texture2D" uid="uid://ddcunf3kb1g07" path="res://assets/enemigos/volador/abeja/morir_2.png" id="2_e0wgd"]
+[ext_resource type="Texture2D" uid="uid://brnktgfkhf8h1" path="res://assets/enemigos/volador/abeja/volar_1.png" id="3_eb3ga"]
+[ext_resource type="Texture2D" uid="uid://bs4ucgpvkhny0" path="res://assets/enemigos/volador/abeja/volar_2.png" id="4_sv6o3"]
+[ext_resource type="Texture2D" uid="uid://dccpkuhlfeb8o" path="res://assets/enemigos/volador/abeja/volar_3.png" id="5_2ynx0"]
+[ext_resource type="Texture2D" uid="uid://c5wh1qubaykqd" path="res://assets/enemigos/volador/abeja/volar_4.png" id="6_0ew4i"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2kj2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e0wgd")
+}],
+"loop": 0,
+"name": &"morir",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eb3ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sv6o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2ynx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0ew4i")
+}],
+"loop": 1,
+"name": &"volar",
+"speed": 8.0
+}]

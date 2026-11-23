@@ -1,13 +1,15 @@
 [gd_scene format=4 uid="uid://mtqcc6tro4tv"]
 
 [ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_x6jog"]
+[ext_resource type="PackedScene" uid="uid://dg0q8xdvolrdg" path="res://escenas/hud.tscn" id="2_etr3i"]
 [ext_resource type="Texture2D" uid="uid://dwdc4bddpmauj" path="res://assets/fondos/nivel1/1_3_bano_boca/1 fondo de la boca.png" id="2_x6jog"]
 [ext_resource type="Texture2D" uid="uid://ccv3f2llqb6bt" path="res://assets/fondos/nivel1/1_3_bano_boca/2 pared del baño con la boca abierta.png" id="3_talmw"]
 [ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="4_etr3i"]
 [ext_resource type="TileSet" uid="uid://bhyw26gnrdko" path="res://assets/tilesets/tileset.tres" id="4_talmw"]
 [ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="5_xg0dh"]
 [ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="6_dwahw"]
-[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="7_u6hxr"]
+[ext_resource type="PackedScene" uid="uid://duns4aqaksm6s" path="res://escenas/enemigo_saltador.tscn" id="7_1wk11"]
+[ext_resource type="FontFile" uid="uid://cu74p4eqjhv2o" path="res://assets/fuentes/LuckiestGuy-Regular.ttf" id="10_etr3i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(1632, 20)
@@ -24,6 +26,8 @@ size = Vector2(80, 10)
 [node name="Node2D" type="Node2D" unique_id=886577951]
 script = ExtResource("1_x6jog")
 siguiente = "uid://d22fl7n41cvay"
+
+[node name="HUD" parent="." unique_id=1315079986 instance=ExtResource("2_etr3i")]
 
 [node name="Fondos" type="Node2D" parent="." unique_id=862806088]
 
@@ -49,14 +53,20 @@ tile_set = ExtResource("4_talmw")
 [node name="laia" parent="." unique_id=1882728851 instance=ExtResource("4_etr3i")]
 position = Vector2(100, 311)
 
-[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+[node name="Camera2D" parent="laia" index="3" unique_id=512137502]
 limit_right = 1632
 
 [node name="enara" parent="." unique_id=1322479456 instance=ExtResource("5_xg0dh")]
 position = Vector2(160, 311)
 
-[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+[node name="Camera2D" parent="enara" index="3" unique_id=1765175028]
 limit_right = 1632
+
+[node name="EnemigoSaltador2" parent="." unique_id=279937684 instance=ExtResource("7_1wk11")]
+position = Vector2(604, 340)
+
+[node name="EnemigoSaltador" parent="." unique_id=1373959382 instance=ExtResource("7_1wk11")]
+position = Vector2(652, 340)
 
 [node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
 visible = false
@@ -100,21 +110,27 @@ offset_right = 40.0
 offset_bottom = 5.0
 color = Color(1, 1, 1, 0.2509804)
 
-[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+[node name="Completado" type="CanvasLayer" parent="." unique_id=883348178]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=1908717541]
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+[node name="Label" type="Label" parent="Completado" unique_id=745855562]
 offset_top = 160.0
 offset_right = 640.0
 offset_bottom = 200.0
-theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
-theme_override_fonts/font = ExtResource("7_u6hxr")
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.8392157, 0.3529412, 1)
+theme_override_colors/font_shadow_color = Color(0.2901961, 0.17254902, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.078431375, 0.11764706, 0.27450982, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("10_etr3i")
+theme_override_font_sizes/font_size = 38
 text = "¡NIVEL COMPLETADO!"
 horizontal_alignment = 1
 

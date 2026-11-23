@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://danreftcw5g0i"]
 
 [ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_r4443"]
+[ext_resource type="PackedScene" uid="uid://dg0q8xdvolrdg" path="res://escenas/hud.tscn" id="2_35eap"]
 [ext_resource type="Texture2D" uid="uid://45qkswae4nud" path="res://assets/fondos/nivel1/1_2_cocina/1 edificios (detrás de la ventana).png" id="2_ay032"]
 [ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="2_cb4j0"]
 [ext_resource type="Texture2D" uid="uid://ccp6uutk6xsyd" path="res://assets/fondos/nivel1/1_2_cocina/2 dentro de la nevera (detrás de las ventanas de hielo).png" id="3_6wvmc"]
@@ -8,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cch5kyh4wxqqq" path="res://assets/fondos/nivel1/1_2_cocina/3 pared de la cocina y la nevera.png" id="4_eaedb"]
 [ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="4_laiqb"]
 [ext_resource type="TileSet" uid="uid://bhyw26gnrdko" path="res://assets/tilesets/tileset.tres" id="5_eaedb"]
-[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="5_p8cgi"]
+[ext_resource type="FontFile" uid="uid://cu74p4eqjhv2o" path="res://assets/fuentes/LuckiestGuy-Regular.ttf" id="10_35eap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(1392, 20)
@@ -25,6 +26,8 @@ size = Vector2(80, 10)
 [node name="Node2D" type="Node2D" unique_id=886577951]
 script = ExtResource("1_r4443")
 siguiente = "uid://mtqcc6tro4tv"
+
+[node name="HUD" parent="." unique_id=1315079986 instance=ExtResource("2_35eap")]
 
 [node name="Fondos" type="Node2D" parent="." unique_id=862806088]
 
@@ -61,13 +64,13 @@ tile_set = ExtResource("5_eaedb")
 [node name="laia" parent="." unique_id=1882728851 instance=ExtResource("2_cb4j0")]
 position = Vector2(100, 311)
 
-[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+[node name="Camera2D" parent="laia" index="3" unique_id=512137502]
 limit_right = 1392
 
 [node name="enara" parent="." unique_id=1322479456 instance=ExtResource("3_x63k0")]
 position = Vector2(160, 311)
 
-[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+[node name="Camera2D" parent="enara" index="3" unique_id=1765175028]
 limit_right = 1392
 
 [node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
@@ -112,21 +115,27 @@ offset_right = 40.0
 offset_bottom = 5.0
 color = Color(1, 1, 1, 0.2509804)
 
-[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+[node name="Completado" type="CanvasLayer" parent="." unique_id=592800578]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=109900342]
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+[node name="Label" type="Label" parent="Completado" unique_id=1373643843]
 offset_top = 160.0
 offset_right = 640.0
 offset_bottom = 200.0
-theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
-theme_override_fonts/font = ExtResource("5_p8cgi")
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.8392157, 0.3529412, 1)
+theme_override_colors/font_shadow_color = Color(0.2901961, 0.17254902, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.078431375, 0.11764706, 0.27450982, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("10_35eap")
+theme_override_font_sizes/font_size = 38
 text = "¡NIVEL COMPLETADO!"
 horizontal_alignment = 1
 

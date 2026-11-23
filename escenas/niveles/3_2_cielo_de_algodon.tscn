@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_4a8ca"]
 [ext_resource type="Texture2D" uid="uid://davu4cytp1wkn" path="res://assets/fondos/nivel3/3_2_cielo_de_algodon/1 cielo lila.png" id="2_1cxsu"]
+[ext_resource type="PackedScene" uid="uid://dg0q8xdvolrdg" path="res://escenas/hud.tscn" id="2_u08k0"]
 [ext_resource type="Texture2D" uid="uid://bb6yocjva2fmg" path="res://assets/fondos/nivel3/3_2_cielo_de_algodon/2 nubes.png" id="3_6i1yv"]
 [ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="4_kbl8v"]
 [ext_resource type="Texture2D" uid="uid://0j54k61odxxv" path="res://assets/fondos/nivel3/3_2_cielo_de_algodon/3 colinas lejanas.png" id="4_y575l"]
@@ -9,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="5_y575l"]
 [ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="6_u08k0"]
 [ext_resource type="SpriteFrames" uid="uid://cwj4ya48tcvv" path="res://assets/animaciones/laia_pijama.tres" id="7_kbl8v"]
-[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="7_u0qe0"]
 [ext_resource type="SpriteFrames" uid="uid://d1gaqxclmup4i" path="res://assets/animaciones/enara_pijama.tres" id="9_y575l"]
+[ext_resource type="FontFile" uid="uid://cu74p4eqjhv2o" path="res://assets/fuentes/LuckiestGuy-Regular.ttf" id="12_u08k0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(1440, 20)
@@ -28,6 +29,8 @@ size = Vector2(80, 10)
 script = ExtResource("1_4a8ca")
 siguiente = "uid://dg0lrqas2ex1m"
 
+[node name="HUD" parent="." unique_id=1315079986 instance=ExtResource("2_u08k0")]
+
 [node name="Fondos" type="Node2D" parent="." unique_id=862806088]
 
 [node name="Parallax2D" type="Parallax2D" parent="Fondos" unique_id=980523701]
@@ -44,6 +47,7 @@ stretch_mode = 6
 [node name="Parallax2D2" type="Parallax2D" parent="Fondos" unique_id=938591000]
 scroll_scale = Vector2(0.2, 0)
 repeat_size = Vector2(1086, 0)
+autoscroll = Vector2(-10, 0)
 
 [node name="capa2" type="TextureRect" parent="Fondos/Parallax2D2" unique_id=975500608]
 offset_right = 1086.0
@@ -72,14 +76,14 @@ tile_set = ExtResource("5_6i1yv")
 position = Vector2(100, 311)
 ropa = ExtResource("7_kbl8v")
 
-[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+[node name="Camera2D" parent="laia" index="3" unique_id=512137502]
 limit_right = 1440
 
 [node name="enara" parent="." unique_id=1322479456 instance=ExtResource("5_y575l")]
 position = Vector2(160, 311)
 ropa = ExtResource("9_y575l")
 
-[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+[node name="Camera2D" parent="enara" index="3" unique_id=1765175028]
 limit_right = 1440
 
 [node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
@@ -124,21 +128,27 @@ offset_right = 40.0
 offset_bottom = 5.0
 color = Color(1, 1, 1, 0.2509804)
 
-[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+[node name="Completado" type="CanvasLayer" parent="." unique_id=462406318]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=418362081]
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+[node name="Label" type="Label" parent="Completado" unique_id=897593220]
 offset_top = 160.0
 offset_right = 640.0
 offset_bottom = 200.0
-theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
-theme_override_fonts/font = ExtResource("7_u0qe0")
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.8392157, 0.3529412, 1)
+theme_override_colors/font_shadow_color = Color(0.2901961, 0.17254902, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.078431375, 0.11764706, 0.27450982, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("12_u08k0")
+theme_override_font_sizes/font_size = 38
 text = "¡NIVEL COMPLETADO!"
 horizontal_alignment = 1
 

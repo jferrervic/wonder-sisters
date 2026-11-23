@@ -7,10 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="4_p57q2"]
 [ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="5_3p3em"]
 [ext_resource type="TileSet" uid="uid://bhyw26gnrdko" path="res://assets/tilesets/tileset.tres" id="5_84m7x"]
+[ext_resource type="PackedScene" uid="uid://dg0q8xdvolrdg" path="res://escenas/hud.tscn" id="5_wjrau"]
 [ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="6_wjrau"]
-[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="7_bawld"]
 [ext_resource type="SpriteFrames" uid="uid://cwj4ya48tcvv" path="res://assets/animaciones/laia_pijama.tres" id="7_p57q2"]
 [ext_resource type="SpriteFrames" uid="uid://d1gaqxclmup4i" path="res://assets/animaciones/enara_pijama.tres" id="9_3p3em"]
+[ext_resource type="FontFile" uid="uid://cu74p4eqjhv2o" path="res://assets/fuentes/LuckiestGuy-Regular.ttf" id="12_wjrau"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(1440, 20)
@@ -44,6 +45,7 @@ stretch_mode = 6
 [node name="Parallax2D2" type="Parallax2D" parent="Fondos" unique_id=1019486944]
 scroll_scale = Vector2(0.2, 0)
 repeat_size = Vector2(1086, 0)
+autoscroll = Vector2(-10, 0)
 
 [node name="capa2" type="TextureRect" parent="Fondos/Parallax2D2" unique_id=975500608]
 offset_right = 1086.0
@@ -63,6 +65,8 @@ texture = ExtResource("4_3p3em")
 expand_mode = 1
 stretch_mode = 6
 
+[node name="HUD" parent="." unique_id=1315079986 instance=ExtResource("5_wjrau")]
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1529786858]
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAABAA4AAQABAAcAAAACAA4AAQABAAcAAAADAA4AAQABAAcAAAAEAA4AAQABAAcAAAAFAA4AAQABAAcAAAAGAA4AAQABAAcAAAAHAA4AAQABAAcAAAAIAA4AAQABAAcAAAAJAA4AAQABAAcAAAAKAA4AAQABAAcAAAALAA4AAQABAAcAAAAMAA4AAQABAAcAAAANAA4AAQABAAcAAAAOAA4AAQABAAcAAAAPAA4AAQABAAcAAAAQAA4AAQABAAcAAAARAA4AAQABAAcAAAASAA4AAQABAAcAAAATAA4AAQABAAcAAAAUAA4AAQABAAcAAAAVAA4AAQABAAcAAAAWAA4AAQABAAcAAAAXAA4AAQABAAcAAAAYAA4AAQABAAcAAAAZAA4AAQABAAcAAAAaAA4AAQABAAcAAAAbAA4AAQABAAcAAAAcAA4AAQABAAcAAAAdAA4AAQABAAcAAAAeAA4AAQABAAcAAAAfAA4AAQABAAcAAAAgAA4AAQABAAcAAAAhAA4AAQABAAcAAAAiAA4AAQABAAcAAAAjAA4AAQABAAcAAAAkAA4AAQABAAcAAAAlAA4AAQABAAcAAAAmAA4AAQABAAcAAAAnAA4AAQABAAcAAAAoAA4AAQABAAcAAAApAA4AAQABAAcAAAAqAA4AAQABAAcAAAArAA4AAQABAAcAAAAsAA4AAQABAAcAAAAtAA4AAQABAAcAAAAuAA4AAQABAAcAAAAvAA4AAQABAAcAAAAwAA4AAQABAAcAAAAxAA4AAQABAAcAAAAyAA4AAQABAAcAAAAzAA4AAQABAAcAAAA0AA4AAQABAAcAAAA1AA4AAQABAAcAAAA2AA4AAQABAAcAAAA3AA4AAQABAAcAAAA4AA4AAQABAAcAAAA5AA4AAQABAAcAAAA6AA4AAQABAAcAAAA7AA4AAQABAAcAAAA8AA4AAQABAAcAAAA9AA4AAQABAAcAAAA+AA4AAQABAAcAAAA/AA4AAQABAAcAAABAAA4AAQABAAcAAABBAA4AAQABAAcAAABCAA4AAQABAAcAAABDAA4AAQABAAcAAABEAA4AAQABAAcAAABFAA4AAQABAAcAAAAAAA4AAQABAAcAAAD//w4AAQABAAcAAABGAA4AAQABAAcAAABHAA4AAQABAAcAAABIAA4AAQABAAcAAABJAA4AAQABAAcAAABKAA4AAQABAAcAAABLAA4AAQABAAcAAABMAA4AAQABAAcAAABNAA4AAQABAAcAAABOAA4AAQABAAcAAABPAA4AAQABAAcAAABQAA4AAQABAAcAAABRAA4AAQABAAcAAABSAA4AAQABAAcAAABTAA4AAQABAAcAAABUAA4AAQABAAcAAABVAA4AAQABAAcAAABWAA4AAQABAAcAAABXAA4AAQABAAcAAABYAA4AAQABAAcAAABZAA4AAQABAAcAAABaAA4AAQABAAcAAABbAA4AAQABAAcAAAAfAAwAAQADAAcAAAAhAAwAAQADAAgAAAAhAAsAAQADAAcAAAAjAAwAAQADAAgAAAAjAAsAAQADAAgAAAAjAAoAAQADAAcAAAAfAA0AAQADAAgAAAAhAA0AAQADAAgAAAAjAA0AAQADAAgAAAA=")
@@ -72,14 +76,14 @@ tile_set = ExtResource("5_84m7x")
 position = Vector2(100, 311)
 ropa = ExtResource("7_p57q2")
 
-[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+[node name="Camera2D" parent="laia" index="3" unique_id=512137502]
 limit_right = 1440
 
 [node name="enara" parent="." unique_id=1322479456 instance=ExtResource("5_3p3em")]
 position = Vector2(160, 311)
 ropa = ExtResource("9_3p3em")
 
-[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+[node name="Camera2D" parent="enara" index="3" unique_id=1765175028]
 limit_right = 1440
 
 [node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
@@ -124,21 +128,27 @@ offset_right = 40.0
 offset_bottom = 5.0
 color = Color(1, 1, 1, 0.2509804)
 
-[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+[node name="Completado" type="CanvasLayer" parent="." unique_id=4499042]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2100408121]
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+[node name="Label" type="Label" parent="Completado" unique_id=1131533471]
 offset_top = 160.0
 offset_right = 640.0
 offset_bottom = 200.0
-theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
-theme_override_fonts/font = ExtResource("7_bawld")
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.8392157, 0.3529412, 1)
+theme_override_colors/font_shadow_color = Color(0.2901961, 0.17254902, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.078431375, 0.11764706, 0.27450982, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("12_wjrau")
+theme_override_font_sizes/font_size = 38
 text = "¡NIVEL COMPLETADO!"
 horizontal_alignment = 1
 

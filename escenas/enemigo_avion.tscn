@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bb8m8xv7sm4bg"]
+
+[ext_resource type="PackedScene" uid="uid://dm0cxqoxpscql" path="res://escenas/enemigo_volador.tscn" id="1_2shh8"]
+[ext_resource type="SpriteFrames" uid="uid://drvlul7yfbx2t" path="res://assets/animaciones/avion.tres" id="2_8il4a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjj7p"]
+size = Vector2(30, 11)
+
+[node name="EnemigoAvion" unique_id=279937684 instance=ExtResource("1_2shh8")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2019907348]
+position = Vector2(0, -7)
+sprite_frames = ExtResource("2_8il4a")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=241481699]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_fjj7p")

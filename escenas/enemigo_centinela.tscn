@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ck0oyj2ljlx48"]
+
+[ext_resource type="Script" uid="uid://bok55w53jqdno" path="res://scripts/enemigo_centinela.gd" id="1_wip0l"]
+[ext_resource type="SpriteFrames" uid="uid://byjgtjvh5hg3i" path="res://assets/animaciones/pelusa.tres" id="2_mtja2"]
+[ext_resource type="Texture2D" uid="uid://b2r8mkstalp45" path="res://assets/tilesets/sombra_pies.png" id="2_u0uyi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
+size = Vector2(20, 18)
+
+[node name="EnemigoCentinela" type="Area2D" unique_id=279937684]
+collision_mask = 6
+script = ExtResource("1_wip0l")
+
+[node name="sombra" type="Sprite2D" parent="." unique_id=249169735]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_u0uyi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2019907348]
+position = Vector2(0, -12.4)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("2_mtja2")
+animation = &"andar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=241481699]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_1d5kb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

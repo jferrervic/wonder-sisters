@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dm0cxqoxpscql"]
+
+[ext_resource type="Script" uid="uid://c0xacvl87c0p5" path="res://scripts/enemigo_volador.gd" id="1_s3yhr"]
+[ext_resource type="SpriteFrames" uid="uid://cdv3l6mx2ale" path="res://assets/animaciones/abeja.tres" id="2_s3yhr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
+size = Vector2(18, 18)
+
+[node name="EnemigoVolador" type="Area2D" unique_id=279937684]
+collision_mask = 6
+script = ExtResource("1_s3yhr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2019907348]
+position = Vector2(0, -14.4)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("2_s3yhr")
+animation = &"volar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=241481699]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_1d5kb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

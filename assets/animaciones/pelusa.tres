@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://byjgtjvh5hg3i"]
+
+[ext_resource type="Texture2D" uid="uid://c6ognjq3l2dnj" path="res://assets/enemigos/centinela/pelusa/andar_1.png" id="1_l1xwa"]
+[ext_resource type="Texture2D" uid="uid://dl8nflomixyuv" path="res://assets/enemigos/centinela/pelusa/andar_2.png" id="2_fjg0r"]
+[ext_resource type="Texture2D" uid="uid://msv1lar1tajb" path="res://assets/enemigos/centinela/pelusa/andar_3.png" id="3_hv8ys"]
+[ext_resource type="Texture2D" uid="uid://bu481kw8ov4hy" path="res://assets/enemigos/centinela/pelusa/andar_4.png" id="4_aph3y"]
+[ext_resource type="Texture2D" uid="uid://dgya0wrlcrsfn" path="res://assets/enemigos/centinela/pelusa/morir_1.png" id="5_cvgji"]
+[ext_resource type="Texture2D" uid="uid://d0n8yp0fuoi8v" path="res://assets/enemigos/centinela/pelusa/morir_2.png" id="6_0sp4i"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l1xwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fjg0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hv8ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aph3y")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cvgji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0sp4i")
+}],
+"loop": 0,
+"name": &"morir",
+"speed": 6.0
+}]

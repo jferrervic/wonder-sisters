@@ -1,13 +1,16 @@
 [gd_scene format=4 uid="uid://ci31a8tenncod"]
 
 [ext_resource type="Script" uid="uid://d3m18qfgeg4qk" path="res://scripts/nivel.gd" id="1_v8g70"]
+[ext_resource type="PackedScene" uid="uid://dg0q8xdvolrdg" path="res://escenas/hud.tscn" id="2_tmcbi"]
 [ext_resource type="Texture2D" uid="uid://crhfj5o73re1n" path="res://assets/fondos/nivel2/2_2_interior_colegio/1 aulas.png" id="2_v8g70"]
 [ext_resource type="Texture2D" uid="uid://cb4cbar7hyr0g" path="res://assets/fondos/nivel2/2_2_interior_colegio/2 pasillo.png" id="3_g67l6"]
 [ext_resource type="PackedScene" uid="uid://dlm4wrtii4xe1" path="res://escenas/laia.tscn" id="4_43mbd"]
 [ext_resource type="TileSet" uid="uid://bhyw26gnrdko" path="res://assets/tilesets/tileset.tres" id="4_g67l6"]
 [ext_resource type="PackedScene" uid="uid://de1fnqgpo8ygy" path="res://escenas/enara.tscn" id="5_tmcbi"]
 [ext_resource type="PackedScene" uid="uid://bkx3gm3e5pf11" path="res://escenas/pausa.tscn" id="6_pw5o5"]
-[ext_resource type="FontFile" uid="uid://bjkcdpvcbhhxu" path="res://assets/fuentes/PixelifySans-Regular.ttf" id="7_l1lxo"]
+[ext_resource type="PackedScene" uid="uid://dm0cxqoxpscql" path="res://escenas/enemigo_volador.tscn" id="9_cahvu"]
+[ext_resource type="PackedScene" uid="uid://bb8m8xv7sm4bg" path="res://escenas/enemigo_avion.tscn" id="9_occtb"]
+[ext_resource type="FontFile" uid="uid://cu74p4eqjhv2o" path="res://assets/fuentes/LuckiestGuy-Regular.ttf" id="11_tmcbi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d5kb"]
 size = Vector2(2172, 20)
@@ -24,6 +27,8 @@ size = Vector2(80, 10)
 [node name="Node2D" type="Node2D" unique_id=886577951]
 script = ExtResource("1_v8g70")
 siguiente = "uid://uryvs0ohwxkk"
+
+[node name="HUD" parent="." unique_id=1315079986 instance=ExtResource("2_tmcbi")]
 
 [node name="Fondos" type="Node2D" parent="." unique_id=862806088]
 
@@ -53,13 +58,13 @@ tile_set = ExtResource("4_g67l6")
 [node name="laia" parent="." unique_id=1882728851 instance=ExtResource("4_43mbd")]
 position = Vector2(100, 311)
 
-[node name="Camera2D" parent="laia" index="2" unique_id=512137502]
+[node name="Camera2D" parent="laia" index="3" unique_id=512137502]
 limit_right = 2172
 
 [node name="enara" parent="." unique_id=1322479456 instance=ExtResource("5_tmcbi")]
 position = Vector2(160, 311)
 
-[node name="Camera2D" parent="enara" index="2" unique_id=1765175028]
+[node name="Camera2D" parent="enara" index="3" unique_id=1765175028]
 limit_right = 2172
 
 [node name="suelo" type="StaticBody2D" parent="." unique_id=177796030]
@@ -104,21 +109,48 @@ offset_right = 40.0
 offset_bottom = 5.0
 color = Color(1, 1, 1, 0.2509804)
 
-[node name="Completado" type="CanvasLayer" parent="." unique_id=2141164499]
+[node name="EnemigoAvion" parent="." unique_id=279937684 instance=ExtResource("9_occtb")]
+position = Vector2(445, 324)
+
+[node name="EnemigoAvion3" parent="." unique_id=1941812826 instance=ExtResource("9_occtb")]
+position = Vector2(524, 325)
+
+[node name="EnemigoAvion2" parent="." unique_id=757765116 instance=ExtResource("9_occtb")]
+position = Vector2(604, 324)
+
+[node name="EnemigoAvion4" parent="." unique_id=1250238857 instance=ExtResource("9_occtb")]
+position = Vector2(673, 326)
+
+[node name="EnemigoVolador" parent="." unique_id=1776328230 instance=ExtResource("9_cahvu")]
+position = Vector2(858, 323)
+
+[node name="EnemigoVolador2" parent="." unique_id=563345958 instance=ExtResource("9_cahvu")]
+position = Vector2(902, 322)
+
+[node name="EnemigoVolador3" parent="." unique_id=1333710976 instance=ExtResource("9_cahvu")]
+position = Vector2(954, 323)
+
+[node name="Completado" type="CanvasLayer" parent="." unique_id=127339842]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=2089436042]
+[node name="ColorRect" type="ColorRect" parent="Completado" unique_id=1026647540]
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Label" type="Label" parent="Completado" unique_id=1576055191]
+[node name="Label" type="Label" parent="Completado" unique_id=749768259]
 offset_top = 160.0
 offset_right = 640.0
 offset_bottom = 200.0
-theme_override_colors/font_color = Color(0.5137255, 0.77254903, 0.9372549, 1)
-theme_override_fonts/font = ExtResource("7_l1lxo")
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.8392157, 0.3529412, 1)
+theme_override_colors/font_shadow_color = Color(0.2901961, 0.17254902, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.078431375, 0.11764706, 0.27450982, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("11_tmcbi")
+theme_override_font_sizes/font_size = 38
 text = "¡NIVEL COMPLETADO!"
 horizontal_alignment = 1
 

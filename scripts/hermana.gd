@@ -23,6 +23,8 @@ var lado_empujar := 0.0
 var empujando := false
 var celebrando := false
 var sombra_x := 0.0
+var sitio_seguro := Vector2.ZERO
+var invencible := 0.0
 
 func _ready() -> void:
 	##LOGICA ROPA##
@@ -33,6 +35,8 @@ func _ready() -> void:
 	y_normal = forma.position.y
 	# La x que tiene la sombra en el editor (mirando a la derecha)
 	sombra_x = $Sombra.position.x
+	# Al empezar, el sitio seguro es donde aparece.
+	sitio_seguro = position
 	sprite.play("quieta")
 
 func _physics_process(delta: float) -> void:
@@ -51,6 +55,11 @@ func _physics_process(delta: float) -> void:
 
 	var velocidad_caida := velocity.y
 	move_and_slide()
+
+	##LOGICA SITIO SEGURO##
+	# Cada vez que pisa suelo, se apunta. Si se cae, vuelve aquí.
+	if is_on_floor():
+		sitio_seguro = position
 
 	##LOGICA ATERRIZAR## (!!!)
 	# Al tocar el suelo despues de una caida se agacha un momento
@@ -125,6 +134,14 @@ func _physics_process(delta: float) -> void:
 		##LOGICA SOMBRA##
 	# La sombra solo se ve cuando estan en el suelo.
 	$Sombra.visible = is_on_floor()
+
+	##LOGICA PARPADEO##
+	# Tras un golpe parpadea un rato. Mientras, no le hacen daño.
+	invencible -= delta
+	if invencible > 0:
+		sprite.visible = int(invencible * 10) % 2 == 0
+	else:
+		sprite.visible = true
 	
 	##LOGICA CAMARA##
 	if activa:
@@ -137,6 +154,23 @@ func _physics_process(delta: float) -> void:
 		modulate = Color(0.6, 0.6, 0.6)
 	tiempo += delta
 	queue_redraw()
+
+##LOGICA HERIDA##
+# Golpe de enemigo. Pierde un corazón y se queda donde está.
+func herida() -> void:
+	if invencible > 0:
+		return
+	invencible = 1.0
+	velocity.y = -150   # Saltito del susto.
+	get_parent().quitar_vida()
+
+##LOGICA CAIDA AL VACIO##
+# Se ha caído. Vuelve al último suelo que pisó y pierde un corazón.
+func caida() -> void:
+	position = sitio_seguro
+	velocity = Vector2.ZERO
+	invencible = 1.0
+	get_parent().quitar_vida()
 
 func _draw() -> void:
 	if activa:
